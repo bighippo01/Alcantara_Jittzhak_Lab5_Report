@@ -13,6 +13,9 @@
         <a href="{{ route('posts.create') }}" class="btn btn-primary">
             + Create New Post
         </a>
+        <a href="{{ route('posts.reports.index') }}" class="btn btn-primary">
+             View Reports
+             </a>
     </div>
 
     @if(session('success'))
@@ -40,6 +43,7 @@
                 <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-success">
                     Edit
                 </a>
+               
 
                 <form action="{{ route('posts.destroy', $post->id) }}"
                       method="POST"
